@@ -83,20 +83,21 @@
 
 // For ModeMCU - use pin numbers in the form PIN_Dx where Dx is the NodeMCU pin designation
 
-#define TFT_CS   2  // Chip select control pin D8
-#define TFT_DC   4  // Data Command control pin
-#define TFT_RST  0  // Reset pin (could connect to NodeMCU RST, see next line)
+#define TFT_CS   -1  // Chip select control pin D8
+#define TFT_DC   19  // Data Command control pin
+#define TFT_RST  -1 // Reset pin (could connect to NodeMCU RST, see next line)
 
-#define TFT_WR	 5  
-#define TFT_RD   21      // /RD signal connected to Arduino digital pin 32
-#define TFT_D0   12
-#define TFT_D1   13
-#define TFT_D2   14
-#define TFT_D3   15
-#define TFT_D4   16
-#define TFT_D5   17
-#define TFT_D6   18
-#define TFT_D7   19
+#define TFT_WR	 18  // 5
+#define TFT_RD   5      // /RD signal connected to Arduino digital pin 32
+#define TFT_D0   17  // 12
+#define TFT_D1   16	// 13
+#define TFT_D2   25 // 14
+#define TFT_D3   26 // 15
+#define TFT_D4   4	// 16
+#define TFT_D5   27 // 13
+#define TFT_D6   14	// 12
+#define TFT_D7   12  // 13
+
 
 //#define TFT_RST  -1  // Set TFT_RST to -1 if the display RESET is connected to NodeMCU RST or 3.3V
 

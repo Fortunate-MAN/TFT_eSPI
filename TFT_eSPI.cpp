@@ -1515,7 +1515,7 @@ void TFT_eSPI::drawChar(int32_t x, int32_t y, unsigned char c, uint32_t color, u
       while(SPI1CMD & SPIBUSY) {}
     }
 #else // for ESP32
-  #if !defined(ESP32_PARALLEL)
+  #if defined(ESP32_PARALLEL)
     for (int8_t j = 0; j < 8; j++) {
       for (int8_t k = 0; k < 5; k++ ) {
         if (column[k] & mask) {
@@ -1531,6 +1531,7 @@ void TFT_eSPI::drawChar(int32_t x, int32_t y, unsigned char c, uint32_t color, u
       writedata16(bg);
     }
   #else
+
     for (int8_t j = 0; j < 8; j++) {
       for (int8_t k = 0; k < 5; k++ ) {
         if (column[k] & mask) {
